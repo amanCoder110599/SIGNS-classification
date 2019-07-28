@@ -1,5 +1,5 @@
 # SIGNS-classification
 
-A Deep Learning model to classify SIGNS from fingers to build an algorithm that would facilitate communications from a speech-impaired person to someone who doesn't understand sign language.
+A Deep Learning model for classifying SIGNS of fingers that would facilitate communications from a speech-impaired person to someone who doesn't understand sign language.
 
 
