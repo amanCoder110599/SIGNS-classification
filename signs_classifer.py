@@ -206,7 +206,9 @@ def model(X_train, Y_train, X_test, Y_test, learning_rate = 0.0001,
     z3 = forward_propagation(X, parameters)
     
     # Cost function: Add cost function to tensorflow graph
-    cost = compute_cost(z3, Y)
+    cost = compute_cost(Z3, Y)
+    regularizers = tf.nn.l2_loss(parameters["W1"]) + tf.nn.l2_loss(parameters["W2"])
+    loss = tf.reduce_mean(cost + 0.1 * regularizers)
     
     # Backpropagation: Define the tensorflow optimizer. Use an AdamOptimizer.
     optimizer = tf.train.AdamOptimizer(learning_rate = learning_rate).minimize(cost)
